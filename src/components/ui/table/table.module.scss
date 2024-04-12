@@ -1,0 +1,41 @@
+@import '../../../shared/styles/mixins.scss';
+
+.caption {
+  @apply text-primary-100 text-left text-5xl uppercase;
+}
+
+.body {
+  @apply border-primary-500 border-b-[3px];
+}
+
+.table {
+  @apply w-full;
+}
+
+.header {
+  @apply block w-full border-primary-500 border-[3px] py-1 px-2 rounded-xl mt-2;
+
+  > tr {
+    @apply w-full grid grid-flow-col;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    > th {
+      @apply text-left uppercase text-xl text-white;
+    }
+
+    > th:nth-of-type(4) {
+      @apply text-success;
+    }
+    > th:nth-of-type(5) {
+      @apply text-neutral;
+    }
+  }
+}
+
+.row {
+  @apply w-full grid grid-flow-col py-2 px-2;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  > td {
+    @apply flex items-center text-white uppercase text-xl font-bold max-h-8 overflow-hidden;
+    @include font-codystar;
+  }
+}

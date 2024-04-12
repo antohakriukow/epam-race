@@ -2,7 +2,7 @@
 @import '../../shared//styles/mixins.scss';
 
 .container {
-  @apply grid pt-12;
+  @apply grid pt-12 mb-24;
   grid-template-columns: 140px 1fr 350px 1fr;
   @media (max-width: 600px) {
     @apply pt-4;

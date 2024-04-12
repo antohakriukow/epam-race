@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Stick_No_Bills } from 'next/font/google';
-import './globals.scss';
+import { Providers } from './providers';
 import Header from '@/components/header/Header';
+
+import './globals.scss';
 
 const stickNoBills = Stick_No_Bills({ subsets: ['latin'], weight: '200' });
 
@@ -18,8 +20,10 @@ const RootLayout = ({
   return (
     <html lang='en'>
       <body className={stickNoBills.className}>
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

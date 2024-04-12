@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import styles from './button.module.scss';
-import { TypeMaterialIconName } from '@/shared/types/icon.types';
-import MaterialIcon from '../MaterialIcon';
 import cn from 'clsx';
+import MaterialIcon from '../MaterialIcon';
+import { TypeMaterialIconName } from '@/shared/types/icon.types';
+
+import styles from './button.module.scss';
 
 type TypeSize = 'L' | 'M' | 'S';
 

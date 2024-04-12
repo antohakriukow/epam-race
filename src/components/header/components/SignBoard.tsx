@@ -1,5 +1,5 @@
-import Sign from '@/components/ui/svg/Sign';
 import { FC } from 'react';
+import { Sign } from '@/components/ui';
 
 import styles from '../header.module.scss';
 

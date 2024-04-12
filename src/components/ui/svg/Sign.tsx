@@ -17,8 +17,8 @@ const Sign: FC = () => {
         A 90,90 0 0 1 900,634'
         fill='none'
         stroke={COLOR_SECONDARY}
-        stroke-width='8'
-        stroke-linecap='round'
+        strokeWidth='8'
+        strokeLinecap='round'
       />
 
       <path
@@ -27,11 +27,11 @@ const Sign: FC = () => {
         A 90,90 0 0 1 90,500 
         L 36,260 
         A 90, 90 0 0 1 110,150'
-        stroke-dasharray='200,30,1000'
+        strokeDasharray='200,30,1000'
         fill='none'
         stroke={COLOR_SECONDARY}
-        stroke-width='8'
-        stroke-linecap='round'
+        strokeWidth='8'
+        strokeLinecap='round'
       />
 
       <path
@@ -42,11 +42,11 @@ const Sign: FC = () => {
         A 120,120 0 0 1 900,664 
         L 870, 662
         L 886 560'
-        stroke-dasharray='280,30,10000'
+        strokeDasharray='280,30,10000'
         fill='none'
         stroke={COLOR_PRIMARY_500}
-        stroke-width='8'
-        stroke-linecap='round'
+        strokeWidth='8'
+        strokeLinecap='round'
       />
 
       <path
@@ -57,11 +57,11 @@ const Sign: FC = () => {
         A 120, 120 0 0 1 110,120
         L 130, 116
         L 155 216'
-        stroke-dasharray='930,30,10000'
+        strokeDasharray='930,30,10000'
         fill='none'
         stroke={COLOR_PRIMARY_500}
-        stroke-width='8'
-        stroke-linecap='round'
+        strokeWidth='8'
+        strokeLinecap='round'
       />
     </svg>
   );

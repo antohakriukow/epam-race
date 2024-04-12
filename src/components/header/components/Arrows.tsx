@@ -1,6 +1,7 @@
 import { FC, useState, useEffect, useRef } from 'react';
+import { Arrow } from '@/components/ui';
+
 import styles from '../header.module.scss';
-import Arrow from '@/components/ui/svg/Arrow';
 
 interface ArrowSetProps {
   color: string;

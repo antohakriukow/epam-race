@@ -1,7 +1,8 @@
 'use client';
+
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from '@/components/ui/button/Button';
+import { Button } from '@/components/ui';
 import { COLOR_SECONDARY } from '@/shared/styles/colors';
 
 import styles from './not-found.module.scss';

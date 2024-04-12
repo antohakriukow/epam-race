@@ -30,7 +30,7 @@ const Arrow: FC<ArrowProps> = ({ color }) => (
         L 124,12'
       fill='none'
       stroke={color}
-      stroke-width='42'
+      strokeWidth='42'
     />
     <path
       d='M 12,12
@@ -51,7 +51,7 @@ const Arrow: FC<ArrowProps> = ({ color }) => (
         L 124,12'
       fill='none'
       stroke='white'
-      stroke-width='10'
+      strokeWidth='10'
     />
   </svg>
 );
