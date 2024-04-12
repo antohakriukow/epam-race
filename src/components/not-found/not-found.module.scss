@@ -1,0 +1,12 @@
+.container {
+  @apply w-full flex flex-row items-center justify-center mt-44;
+  > div {
+    @apply mr-12;
+    > h2 {
+      @apply text-primary-500 text-3xl;
+    }
+    > p {
+      @apply text-secondary text-xl;
+    }
+  }
+}

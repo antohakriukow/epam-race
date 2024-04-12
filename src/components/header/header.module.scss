@@ -1,0 +1,61 @@
+@import '../../shared/styles/colors.scss';
+@import '../../shared//styles/mixins.scss';
+
+.container {
+  @apply grid pt-12;
+  grid-template-columns: 140px 1fr 350px 1fr;
+  @media (max-width: 600px) {
+    @apply pt-4;
+  }
+
+  > div:nth-of-type(2) {
+    @apply self-end pb-2;
+  }
+
+  > div:nth-of-type(4) {
+    @apply self-start pt-2;
+  }
+}
+
+.navigation {
+  > button:nth-of-type(1) {
+    @apply mb-8;
+  }
+}
+
+.arrows {
+  @apply flex flex-row items-center overflow-hidden ml-8;
+  > svg {
+    @apply h-10 w-7;
+  }
+}
+
+.signBoard {
+  > svg {
+    @apply absolute top-2;
+    height: 210px;
+    width: 350px;
+  }
+  @media (max-width: 600px) {
+    width: 267px;
+    > svg {
+      height: 160px;
+      width: 267px;
+    }
+  }
+
+  > h1 {
+    @apply flex flex-col items-center justify-center uppercase text-white pt-4;
+    @include font-codystar;
+    font-size: 52px;
+    line-height: 52px;
+    > span:nth-of-type(1) {
+      @apply text-primary-500;
+    }
+    @media (max-width: 600px) {
+      @apply pt-8;
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+}

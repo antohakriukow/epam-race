@@ -1,0 +1,17 @@
+.button {
+  @apply flex flex-row uppercase items-center justify-center gap-2 ring-0 border-2 p-2;
+  line-height: 1;
+}
+
+.large {
+  @apply text-2xl px-5 rounded-xl gap-4 border-4;
+  min-width: 140px;
+}
+
+.medium {
+  @apply text-lg rounded-lg gap-2;
+}
+
+.small {
+  @apply text-xs rounded-md gap-1;
+}
