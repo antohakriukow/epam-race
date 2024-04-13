@@ -39,3 +39,21 @@
     @include font-codystar;
   }
 }
+
+@media (max-width: 680px) {
+  .caption {
+    @apply text-3xl;
+  }
+  .header {
+    @apply text-base;
+    > tr {
+      grid-template-columns: 40px 70px 1fr 50px 90px;
+    }
+  }
+  .body {
+    @apply text-base;
+  }
+  .row {
+    grid-template-columns: 40px 70px 1fr 50px 90px;
+  }
+}
