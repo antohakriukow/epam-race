@@ -1,0 +1,50 @@
+@import '../../../../shared/styles/colors.scss';
+@import '../../../../shared/styles/mixins.scss';
+
+.container {
+  @apply relative flex flex-row items-center justify-between w-full;
+}
+
+.line {
+  @apply z-10 absolute right-[44px] h-full flex flex-col w-6 items-center justify-between px-1 mx-2 border-l-white border-r-success box-border;
+  border-right-width: 2px;
+  border-left-width: 2px;
+
+  background: url(../../../../assets/brick-pattern.svg);
+  background-repeat: repeat;
+  background-size: 82px 42px;
+
+  > svg {
+    @apply px-1;
+  }
+  > p {
+    @apply text-white uppercase rotate-90 self-center py-4;
+  }
+}
+
+.start {
+  @apply border-r-neutral left-[44px];
+}
+
+.tracks {
+  @apply pl-[72px] relative h-full w-full grid box-border;
+  grid-template-rows: repeat(1fr);
+}
+
+.track {
+  @apply flex flex-row py-3 w-full border-b-white border-t-white border-b-2 box-border;
+
+  > svg {
+    @apply w-12 z-20;
+    transform: translateX(-70px);
+  }
+
+  > p {
+    @apply text-white text-2xl self-center;
+    @include font-codystar;
+  }
+}
+
+.firstTrack {
+  @apply border-t-2;
+}

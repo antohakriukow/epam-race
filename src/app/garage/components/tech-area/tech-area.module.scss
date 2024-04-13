@@ -1,0 +1,15 @@
+.container {
+  @apply grid;
+  grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.box {
+  @apply flex flex-row self-center;
+
+  > div {
+    @apply mr-2;
+    > button {
+      @apply w-full my-2;
+    }
+  }
+}

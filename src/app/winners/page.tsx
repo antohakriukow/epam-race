@@ -8,29 +8,31 @@ const WinnersPage: FC = () => {
   const headerTitles = ['№', 'car', 'name', 'wins', 'best time (seconds)'];
 
   return (
-    <Table>
-      <Caption title='winners' />
-      <Header headerTitles={headerTitles} />
-      {isLoading || !isSuccess || !winners?.length ? null : (
-        <Body>
-          {winners.map((winner) => (
-            <Row
-              key={winner.id}
-              rowData={[
-                winner.id,
-                <Car
-                  key={winner.id}
-                  color={winner.color}
-                />,
-                winner.name,
-                winner.wins,
-                winner.time,
-              ]}
-            />
-          ))}
-        </Body>
-      )}
-    </Table>
+    <section>
+      <Table>
+        <Caption title='winners' />
+        <Header headerTitles={headerTitles} />
+        {isLoading || !isSuccess || !winners?.length ? null : (
+          <Body>
+            {winners.map((winner) => (
+              <Row
+                key={winner.id}
+                rowData={[
+                  winner.id,
+                  <Car
+                    key={winner.id}
+                    color={winner.color}
+                  />,
+                  winner.name,
+                  winner.wins,
+                  winner.time,
+                ]}
+              />
+            ))}
+          </Body>
+        )}
+      </Table>
+    </section>
   );
 };
 export default WinnersPage;

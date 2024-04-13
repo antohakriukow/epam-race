@@ -1,0 +1,11 @@
+.border {
+  @apply flex items-start w-auto h-7 overflow-x-hidden py-1 border-b-2 border-t-2 border-white my-2;
+  > svg {
+    @apply w-3 h-4;
+    flex: 0 0 auto;
+  }
+}
+
+.flexContainer {
+  @apply h-full flex flex-row;
+}

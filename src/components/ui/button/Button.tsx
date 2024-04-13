@@ -25,8 +25,8 @@ const Button: FC<Props> = ({
   isDisabled,
 }) => {
   const LARGE_ICON_SIZE = '32';
-  const MEDIUM_ICON_SIZE = '24';
-  const SMALL_ICON_SIZE = '18';
+  const MEDIUM_ICON_SIZE = '20';
+  const SMALL_ICON_SIZE = '16';
 
   const getIconSize = (): string => {
     switch (size) {

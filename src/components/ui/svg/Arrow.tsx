@@ -1,13 +1,12 @@
 import { FC } from 'react';
 
-interface ArrowProps {
+interface Props {
   color: string;
 }
 
-const Arrow: FC<ArrowProps> = ({ color }) => (
+const Arrow: FC<Props> = ({ color }) => (
   <svg
-    width='342'
-    height='516'
+    style={{ height: '100%' }}
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 342 516'
   >

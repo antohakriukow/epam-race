@@ -1,6 +1,11 @@
 .button {
   @apply flex flex-row uppercase items-center justify-center gap-2 ring-0 border-2 p-2;
   line-height: 1;
+
+  &:disabled {
+    border-color: gray;
+    color: gray;
+  }
 }
 
 .large {
@@ -9,9 +14,9 @@
 }
 
 .medium {
-  @apply text-lg rounded-lg gap-2;
+  @apply text-sm rounded-md gap-1 py-0.5;
 }
 
 .small {
-  @apply text-xs rounded-md gap-1;
+  @apply text-xs px-1 rounded-[4px] py-0.5 gap-1;
 }

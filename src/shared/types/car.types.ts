@@ -10,3 +10,5 @@ export interface ICar {
 
 export interface ICarDTO extends Pick<ICar, 'name' | 'color'> {}
 export interface IWinnerDTO extends Pick<ICar, 'id' | 'wins' | 'time'> {}
+
+export interface ICarId extends Pick<ICar, 'id'> {}
