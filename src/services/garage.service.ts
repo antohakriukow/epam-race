@@ -4,11 +4,18 @@ import { ICar, ICarDTO } from '@/shared/types/car.types';
 class GarageService {
   private BASE_URL = '/garage';
 
-  async getCars(page?: number, limit?: number): Promise<ICar[]> {
+  async getCars(
+    page?: number,
+    limit?: number,
+  ): Promise<{ data: ICar[]; totalCount: number }> {
     const response = await configuredAxios.get<ICar[]>(this.BASE_URL, {
       params: { _page: page, _limit: limit },
     });
-    return response.data;
+    const totalCount = parseInt(response.headers['x-total-count'], 10);
+    return {
+      data: response.data,
+      totalCount: totalCount,
+    };
   }
 
   async getCar(id: string): Promise<ICar> {

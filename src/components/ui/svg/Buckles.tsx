@@ -14,6 +14,11 @@ const Buckles: FC<Props> = ({ color, count }) => {
       viewBox={`0 0 ${size} ${size + step * count}`}
       style={{ height: '100%' }}
     >
+      <rect
+        width='100%'
+        height='100%'
+        fill='#182051'
+      />
       {Array.from({ length: count }).map((_, idx) => (
         <path
           key={idx}

@@ -1,0 +1,6 @@
+.container {
+  @apply flex flex-row items-center justify-between;
+  > p {
+    @apply text-secondary text-2xl uppercase;
+  }
+}

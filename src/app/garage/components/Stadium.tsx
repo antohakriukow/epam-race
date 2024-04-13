@@ -4,18 +4,17 @@ import { FC } from 'react';
 import Border from './border/Border';
 import TechArea from './tech-area/TechArea';
 import RaceArea from './race-area/RaceArea';
-import { useCars } from '../hooks/useCars';
+import { ICar } from '@/shared/types/car.types';
 
-const Stadium: FC = () => {
-  const { cars, isLoading, isSuccess } = useCars();
+interface Props {
+  cars: ICar[];
+}
 
-  if (isLoading || !isSuccess) return null;
+const Stadium: FC<Props> = ({ cars }) => (
+  <Border>
+    <TechArea cars={cars} />
+    <RaceArea cars={cars} />
+  </Border>
+);
 
-  return (
-    <Border>
-      <TechArea cars={cars ?? []} />
-      <RaceArea cars={cars ?? []} />
-    </Border>
-  );
-};
 export default Stadium;

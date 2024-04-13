@@ -20,12 +20,12 @@ const Line: FC<LineProps> = ({ type }) => {
     >
       <Buckles
         color='#fff'
-        count={10}
+        count={20}
       />
       <p>{isStartLine ? 'start' : 'finish'}</p>
       <Buckles
         color='#fff'
-        count={10}
+        count={20}
       />
     </div>
   );

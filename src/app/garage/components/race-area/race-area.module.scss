@@ -6,16 +6,13 @@
 }
 
 .line {
-  @apply z-10 absolute right-[44px] h-full flex flex-col w-6 items-center justify-between px-1 mx-2 border-l-white border-r-success box-border;
+  @apply z-10 absolute right-[44px] h-full flex flex-col w-6 items-center justify-between mx-2 border-l-white border-r-success box-border;
+  background: '#182051';
   border-right-width: 2px;
   border-left-width: 2px;
 
-  background: url(../../../../assets/brick-pattern.svg);
-  background-repeat: repeat;
-  background-size: 82px 42px;
-
   > svg {
-    @apply px-1;
+    @apply mx-1 w-6;
   }
   > p {
     @apply text-white uppercase rotate-90 self-center py-4;
@@ -23,11 +20,11 @@
 }
 
 .start {
-  @apply border-r-neutral left-[44px];
+  @apply border-r-neutral left-[48px];
 }
 
 .tracks {
-  @apply pl-[72px] relative h-full w-full grid box-border;
+  @apply pl-[76px] relative h-full w-full grid box-border;
   grid-template-rows: repeat(1fr);
 }
 

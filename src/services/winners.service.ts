@@ -7,13 +7,17 @@ class WinnersService {
   async getWinners(
     page?: number,
     limit?: number,
-    sort?: string,
+    sort?: 'id' | 'wins' | 'time',
     order?: 'ASC' | 'DESC',
-  ): Promise<IWinnerDTO[]> {
+  ): Promise<{ data: IWinnerDTO[]; totalCount: number }> {
     const response = await configuredAxios.get<IWinnerDTO[]>(this.BASE_URL, {
       params: { _page: page, _limit: limit, _sort: sort, _order: order },
     });
-    return response.data;
+    const totalCount = parseInt(response.headers['x-total-count'], 10);
+    return {
+      data: response.data,
+      totalCount: totalCount,
+    };
   }
 
   async getWinner(id: string): Promise<IWinnerDTO> {

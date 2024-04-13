@@ -5,13 +5,15 @@ import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500, COLOR_SUCCESS } from '@/shared/styles/colors';
 
 import styles from './toolbar.module.scss';
+import { useGenerateCars } from '../../hooks/useGenerateCars';
 
 const Toolbar: FC = () => {
+  const { generateCars } = useGenerateCars();
   const handleStartRace = () => {};
   const handleResetRace = () => {};
   const handleCreateCar = () => {};
   const handleUpdateCar = () => {};
-  const handleGenerateCars = () => {};
+
   return (
     <div className={styles.container}>
       <div>
@@ -54,7 +56,7 @@ const Toolbar: FC = () => {
         <Button
           size='M'
           text='generate cars'
-          onClick={handleGenerateCars}
+          onClick={generateCars}
           color={COLOR_SUCCESS}
         />
       </div>

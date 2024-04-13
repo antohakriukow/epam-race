@@ -1,0 +1,6 @@
+.container {
+  @apply flex flex-row items-center text-primary-500 text-2xl uppercase justify-end;
+  > svg {
+    @apply cursor-pointer;
+  }
+}

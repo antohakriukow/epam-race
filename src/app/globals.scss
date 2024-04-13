@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply px-14;
+  @apply px-14 select-none;
   background: url(../assets/brick-pattern.svg);
   background-repeat: repeat;
   background-size: 82px 42px;
