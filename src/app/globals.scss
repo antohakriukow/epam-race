@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 body {
-  @apply px-14 select-none;
-  background: url(../assets/brick-pattern.svg);
+  @apply flex flex-col px-14 select-none min-h-screen;
+  background: url(../shared//images/brick-pattern.svg);
   background-repeat: repeat;
   background-size: 82px 42px;
 
   @media (max-width: 680px) {
     @apply px-8;
+  }
+
+  main {
+    @apply flex flex-col flex-1;
   }
 }
 

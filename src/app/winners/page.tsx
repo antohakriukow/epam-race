@@ -12,7 +12,7 @@ const WinnersPage: FC = () => {
   console.log('page, lastPageNumber: ', page, lastPageNumber);
 
   return (
-    <section>
+    <main>
       <Table>
         <Caption title='winners' />
         <Header headerTitles={headerTitles} />
@@ -41,7 +41,7 @@ const WinnersPage: FC = () => {
         setPage={setPage}
         lastPage={lastPageNumber}
       />
-    </section>
+    </main>
   );
 };
 export default WinnersPage;

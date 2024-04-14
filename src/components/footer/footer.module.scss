@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-row items-center justify-center py-3;
+
+  > p {
+    @apply text-gray text-base;
+  }
+
+  > svg {
+    @apply h-6 w-6 mr-5;
+  }
+}

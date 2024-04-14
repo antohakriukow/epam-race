@@ -12,6 +12,7 @@ const config: Config = {
       black: colors.black,
       white: colors.white,
       transparent: colors.transparent,
+      gray: '#9f9e9c',
       primary: {
         100: '#eadde9',
         500: '#e9abeb',

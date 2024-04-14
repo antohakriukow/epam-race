@@ -4,6 +4,7 @@ import { Providers } from './providers';
 import Header from '@/components/header/Header';
 
 import './globals.scss';
+import Footer from '@/components/footer/Footer';
 
 const stickNoBills = Stick_No_Bills({ subsets: ['latin'], weight: '200' });
 
@@ -23,6 +24,7 @@ const RootLayout = ({
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

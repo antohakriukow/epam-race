@@ -10,7 +10,7 @@ const GaragePage: FC = () => {
   const { cars, isLoading, isSuccess, page, setPage, totalCount } = useCars();
 
   return (
-    <section>
+    <main>
       <Toolbar />
       {isLoading || !isSuccess ? null : <Stadium cars={cars} />}
       {!!cars?.length && (
@@ -20,7 +20,7 @@ const GaragePage: FC = () => {
           totalCount={totalCount}
         />
       )}
-    </section>
+    </main>
   );
 };
 export default GaragePage;
