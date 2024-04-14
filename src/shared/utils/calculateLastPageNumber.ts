@@ -1,4 +1,4 @@
 export const calculateLastPageNumber = (
   totalElementsCount: number,
   elementsOnPageLimit: number,
-) => Math.floor(totalElementsCount / elementsOnPageLimit + 1);
+) => Math.ceil(totalElementsCount / elementsOnPageLimit);

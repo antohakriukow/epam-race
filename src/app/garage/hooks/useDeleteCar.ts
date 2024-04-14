@@ -6,7 +6,7 @@ export const useDeleteCar = () => {
   const { garagePageNumber } = useTypedSelector((state) => state.garage);
   const queryClient = useQueryClient();
 
-  const { mutate: deleteCar, isPending: isDeletePending } = useMutation({
+  const { mutate: deleteCar } = useMutation({
     mutationKey: ['delete car'],
     mutationFn: (id: string) => garageService.deleteCar(id),
     onSuccess() {
@@ -16,5 +16,5 @@ export const useDeleteCar = () => {
     },
   });
 
-  return { deleteCar, isDeletePending };
+  return { deleteCar };
 };

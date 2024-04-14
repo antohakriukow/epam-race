@@ -4,5 +4,5 @@ export interface IGarageState {
   updatingCarName: string | null;
   updatingCarColor: string | null;
   creatingCarName: string | null;
-  creatingCarColor: string | null;
+  creatingCarColor: string;
 }

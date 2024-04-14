@@ -18,9 +18,9 @@ const PageSelector: FC<Props> = ({ type, page, totalCount, setPage }) => {
   const pageLimit = type === 'garage' ? GARAGE_PAGE_LIMIT : WINNERS_PAGE_LIMIT;
   const lastPageNumber = calculateLastPageNumber(totalCount, pageLimit);
 
-  const isBackButtonVisible = page !== 1;
-  const isForwardButtonVisible = page !== lastPageNumber;
   const isGaragePage = type === 'garage';
+  const isBackButtonVisible = page !== 1;
+  const isForwardButtonVisible = page < lastPageNumber;
 
   const handleGoBack = () => setPage(Math.max(page - 1, 0));
   const handleGoForward = () => setPage(page + 1);

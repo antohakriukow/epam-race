@@ -12,6 +12,7 @@ interface Props {
 }
 
 const RaceArea: FC<Props> = ({ cars }) => {
+  if (!cars.length) return null;
   return (
     <div className={styles.container}>
       <Line type={LineType.START} />

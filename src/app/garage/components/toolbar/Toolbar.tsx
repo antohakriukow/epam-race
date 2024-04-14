@@ -6,12 +6,12 @@ import { COLOR_PRIMARY_500, COLOR_SUCCESS } from '@/shared/styles/colors';
 
 import styles from './toolbar.module.scss';
 import { useGenerateCars } from '../../hooks/useGenerateCars';
+import CreateCarForm from './forms/CreateCarForm';
 
 const Toolbar: FC = () => {
   const { generateCars } = useGenerateCars();
   const handleStartRace = () => {};
   const handleResetRace = () => {};
-  const handleCreateCar = () => {};
   const handleUpdateCar = () => {};
 
   return (
@@ -32,16 +32,7 @@ const Toolbar: FC = () => {
           color={COLOR_PRIMARY_500}
         />
       </div>
-      <div>
-        <input type='text' />
-        <input type='color' />
-        <Button
-          size='M'
-          text='create'
-          onClick={handleCreateCar}
-          color={COLOR_PRIMARY_500}
-        />
-      </div>
+      <CreateCarForm />
       <div>
         <input type='text' />
         <input type='color' />

@@ -13,14 +13,12 @@ const GaragePage: FC = () => {
     <main>
       <Toolbar />
       {isLoading || !isSuccess ? null : <Stadium cars={cars} />}
-      {!!cars?.length && (
-        <PageSelector
-          type='garage'
-          page={page}
-          setPage={setPage}
-          totalCount={totalCount}
-        />
-      )}
+      <PageSelector
+        type='garage'
+        page={page}
+        setPage={setPage}
+        totalCount={totalCount}
+      />
     </main>
   );
 };
