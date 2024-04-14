@@ -1,11 +1,6 @@
 .button {
   @apply flex flex-row uppercase items-center justify-center gap-2 ring-0 border-2 p-2;
   line-height: 1;
-
-  &:disabled {
-    border-color: gray;
-    color: gray;
-  }
 }
 
 .large {

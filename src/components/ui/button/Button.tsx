@@ -4,6 +4,7 @@ import MaterialIcon from '../MaterialIcon';
 import { TypeMaterialIconName } from '@/shared/types/icon.types';
 
 import styles from './button.module.scss';
+import { COLOR_GRAY } from '@/shared/styles/colors';
 
 type TypeSize = 'L' | 'M' | 'S';
 
@@ -12,7 +13,7 @@ interface Props {
   iconName?: TypeMaterialIconName;
   color: string;
   size?: TypeSize;
-  isDisabled?: boolean;
+  disabled?: boolean;
   onClick: () => void;
 }
 
@@ -22,7 +23,7 @@ const Button: FC<Props> = ({
   color = '#fff',
   size = 'M',
   onClick,
-  isDisabled,
+  disabled,
 }) => {
   const LARGE_ICON_SIZE = '32';
   const MEDIUM_ICON_SIZE = '20';
@@ -42,6 +43,7 @@ const Button: FC<Props> = ({
   };
 
   const iconSize = getIconSize();
+  const buttonColor = disabled ? COLOR_GRAY : color;
 
   return (
     <button
@@ -50,9 +52,9 @@ const Button: FC<Props> = ({
         [styles.medium]: size === 'M',
         [styles.small]: size === 'S',
       })}
-      style={{ borderColor: color, color }}
+      style={{ borderColor: buttonColor, color: buttonColor }}
       onClick={onClick}
-      disabled={isDisabled}
+      disabled={disabled}
     >
       {!!text && text}
       {!!iconName && (
