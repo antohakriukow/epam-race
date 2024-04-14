@@ -1,0 +1,15 @@
+@import '../../../../../shared/styles/mixins.scss';
+
+.track {
+  @apply flex flex-row py-1 w-full border-b-white border-t-white border-b-2 box-border;
+
+  > svg {
+    @apply w-12 z-20;
+    transform: translateX(-82px);
+  }
+
+  > p {
+    @apply text-white text-2xl self-center;
+    @include font-codystar;
+  }
+}

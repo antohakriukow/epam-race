@@ -3,7 +3,8 @@ import cn from 'clsx';
 import { Car } from '@/components/ui';
 import { ICar } from '@/shared/types/car.types';
 
-import styles from '../race-area.module.scss';
+import styles from './track.module.scss';
+import GarageBox from '../garage-box/GarageBox';
 
 interface Props {
   car: ICar;
@@ -17,6 +18,7 @@ const Track: FC<Props> = ({ car, isFirst }) => {
         [styles.firstTrack]: isFirst,
       })}
     >
+      <GarageBox id={car.id} />
       <Car color={car.color} />
       <p>{car.name}</p>
     </div>

@@ -10,7 +10,7 @@ export const useDeleteCar = () => {
   const { mutate: deleteCar } = useMutation({
     mutationKey: ['delete car'],
     mutationFn: (id: string) =>
-      Promise.all([
+      Promise.allSettled([
         garageService.deleteCar(id),
         winnersService.deleteWinner(id),
       ]),

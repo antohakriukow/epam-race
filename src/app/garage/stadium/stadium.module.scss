@@ -1,0 +1,14 @@
+@import '../../../shared/styles//mixins.scss';
+
+.container {
+  @apply relative flex flex-row items-center justify-between w-full;
+}
+
+.tracks {
+  @apply pl-[96px] relative h-full w-full grid box-border;
+  grid-template-rows: repeat(1fr);
+}
+
+.firstTrack {
+  @apply border-t-2;
+}

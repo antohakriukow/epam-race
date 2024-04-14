@@ -1,14 +1,13 @@
 import { FC } from 'react';
 import { ICarId } from '@/shared/types/car.types';
+import CarButtons from './components/CarButtons';
+import EngineButtons from './components/EngineButtons';
 
-import CarButtons from './CarButtons';
-import EngineButtons from './EngineButtons';
-
-import styles from '../tech-area.module.scss';
+import styles from './garage-box.module.scss';
 
 const GarageBox: FC<ICarId> = ({ id }) => {
   return (
-    <div className={styles.box}>
+    <div className={styles.container}>
       <CarButtons id={id} />
       <EngineButtons id={id} />
     </div>

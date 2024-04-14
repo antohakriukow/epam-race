@@ -1,0 +1,17 @@
+.line {
+  @apply z-10 absolute right-[44px] h-full flex flex-col w-6 items-center justify-between mx-2 border-l-white border-r-success box-border;
+  background: '#182051';
+  border-right-width: 2px;
+  border-left-width: 2px;
+
+  > svg {
+    @apply mx-1 w-6;
+  }
+  > p {
+    @apply text-white uppercase rotate-90 self-center py-4;
+  }
+}
+
+.start {
+  @apply border-r-neutral left-[148px];
+}
