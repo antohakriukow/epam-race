@@ -1,15 +1,16 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import { BsCaretLeft, BsCaretRight } from 'react-icons/bs';
 
 import styles from './page-selector.module.scss';
 import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
 import { GARAGE_PAGE_LIMIT, WINNERS_PAGE_LIMIT } from '@/shared/constants';
 import { calculateLastPageNumber } from '@/shared/utils/calculateLastPageNumber';
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 
 interface Props {
   type: 'garage' | 'winners';
   page: number;
-  setPage: Dispatch<SetStateAction<number>>;
+  setPage: ActionCreatorWithPayload<number, string>;
   totalCount: number;
 }
 
@@ -21,8 +22,8 @@ const PageSelector: FC<Props> = ({ type, page, totalCount, setPage }) => {
   const isForwardButtonVisible = page !== lastPageNumber;
   const isGaragePage = type === 'garage';
 
-  const handleGoBack = () => setPage((old) => Math.max(old - 1, 0));
-  const handleGoForward = () => setPage((old: number) => old + 1);
+  const handleGoBack = () => setPage(Math.max(page - 1, 0));
+  const handleGoForward = () => setPage(page + 1);
 
   return (
     <div className={styles.container}>

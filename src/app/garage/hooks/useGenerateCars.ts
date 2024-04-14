@@ -2,7 +2,7 @@ import { garageService } from '@/services/garage.service';
 import { getRandomCarsArray } from '@/shared/utils/getRandomCarsArray';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-export function useGenerateCars() {
+export const useGenerateCars = () => {
   const queryClient = useQueryClient();
 
   const { mutate: generateCars } = useMutation({
@@ -19,4 +19,4 @@ export function useGenerateCars() {
   });
 
   return { generateCars };
-}
+};

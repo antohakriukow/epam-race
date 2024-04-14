@@ -1,18 +1,20 @@
-import { useState } from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { GARAGE_PAGE_LIMIT } from '@/shared/constants';
+import { useTypedSelector } from '@/shared/hooks/useTypedSelector';
+import { useActions } from '@/shared/hooks/useActions';
 
 export const useCars = () => {
-  const [page, setPage] = useState(1);
+  const { garagePageNumber } = useTypedSelector((state) => state.garage);
+  const { setGaragePageNumber } = useActions();
 
   const { data, isSuccess, isLoading, isFetching } = useQuery<{
     data: ICar[];
     totalCount: number;
   }>({
-    queryKey: ['cars', page],
-    queryFn: () => garageService.getCars(page, GARAGE_PAGE_LIMIT),
+    queryKey: ['cars', garagePageNumber],
+    queryFn: () => garageService.getCars(garagePageNumber, GARAGE_PAGE_LIMIT),
     placeholderData: keepPreviousData,
   });
 
@@ -21,7 +23,7 @@ export const useCars = () => {
     totalCount: data?.totalCount || 0,
     isLoading: isLoading || isFetching,
     isSuccess,
-    page,
-    setPage,
+    page: garagePageNumber,
+    setPage: setGaragePageNumber,
   };
 };

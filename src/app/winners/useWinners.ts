@@ -2,20 +2,22 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { winnersService } from '@/services/winners.service';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
-import { useState } from 'react';
 import { WINNERS_PAGE_LIMIT } from '@/shared/constants';
+import { useTypedSelector } from '@/shared/hooks/useTypedSelector';
+import { useActions } from '@/shared/hooks/useActions';
 
 export const useWinners = () => {
-  const [page, setPage] = useState(1);
+  const { winnersPageNumber } = useTypedSelector((state) => state.winners);
+  const { setWinnersPageNumber } = useActions();
 
   const { data, isSuccess, isLoading, isFetching } = useQuery<{
     data: ICar[];
     totalCount: number;
   }>({
-    queryKey: ['winners', page],
+    queryKey: ['winners', winnersPageNumber],
     queryFn: async () => {
       const response = await winnersService.getWinners(
-        page,
+        winnersPageNumber,
         WINNERS_PAGE_LIMIT,
         'wins',
         'DESC',
@@ -44,7 +46,7 @@ export const useWinners = () => {
     totalCount: data?.totalCount,
     isLoading: isLoading || isFetching,
     isSuccess,
-    page,
-    setPage,
+    page: winnersPageNumber,
+    setPage: setWinnersPageNumber,
   };
 };
