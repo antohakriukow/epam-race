@@ -6,7 +6,7 @@ const initialState: IGarageState = {
   garagePageNumber: 1,
   updatingCarId: null,
   updatingCarName: null,
-  updatingCarColor: null,
+  updatingCarColor: COLOR_PRIMARY_500,
   creatingCarName: null,
   creatingCarColor: COLOR_PRIMARY_500,
 };
@@ -44,7 +44,7 @@ export const garageSlice = createSlice({
     clearUpdatingCarStore: (state) => {
       state.updatingCarId = null;
       state.updatingCarName = null;
-      state.updatingCarColor = null;
+      state.updatingCarColor = COLOR_PRIMARY_500;
     },
   },
 });

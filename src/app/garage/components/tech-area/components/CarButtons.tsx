@@ -3,11 +3,14 @@ import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 import { ICarId } from '@/shared/types/car.types';
 import { useDeleteCar } from '@/app/garage/hooks/useDeleteCar';
+import { useActions } from '@/shared/hooks/useActions';
 
 const SelectRemoveButtons: FC<ICarId> = ({ id }) => {
   const { deleteCar } = useDeleteCar();
+  const { setUpdatingCarId } = useActions();
 
   const handleDeleteCar = () => deleteCar(id);
+  const handleSelectCar = () => setUpdatingCarId(id);
 
   return (
     <div>
@@ -15,7 +18,7 @@ const SelectRemoveButtons: FC<ICarId> = ({ id }) => {
         text='select'
         size='S'
         color={COLOR_SECONDARY}
-        onClick={() => {}}
+        onClick={handleSelectCar}
       />
       <Button
         text='remove'
