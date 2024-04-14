@@ -3,8 +3,7 @@ import { winnersService } from '@/services/winners.service';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { useState } from 'react';
-import { CARS_PAGE_LIMIT } from '@/shared/constants';
-import { calculateLastPageNumber } from '@/shared/utils/calculateLastPageNumber';
+import { WINNERS_PAGE_LIMIT } from '@/shared/constants';
 
 export const useWinners = () => {
   const [page, setPage] = useState(1);
@@ -17,7 +16,7 @@ export const useWinners = () => {
     queryFn: async () => {
       const response = await winnersService.getWinners(
         page,
-        CARS_PAGE_LIMIT,
+        WINNERS_PAGE_LIMIT,
         'wins',
         'DESC',
       );

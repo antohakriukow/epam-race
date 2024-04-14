@@ -3,7 +3,7 @@ import { BsCaretLeft, BsCaretRight } from 'react-icons/bs';
 
 import styles from './page-selector.module.scss';
 import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
-import { CARS_PAGE_LIMIT } from '@/shared/constants';
+import { GARAGE_PAGE_LIMIT, WINNERS_PAGE_LIMIT } from '@/shared/constants';
 import { calculateLastPageNumber } from '@/shared/utils/calculateLastPageNumber';
 
 interface Props {
@@ -14,7 +14,8 @@ interface Props {
 }
 
 const PageSelector: FC<Props> = ({ type, page, totalCount, setPage }) => {
-  const lastPageNumber = calculateLastPageNumber(totalCount, CARS_PAGE_LIMIT);
+  const pageLimit = type === 'garage' ? GARAGE_PAGE_LIMIT : WINNERS_PAGE_LIMIT;
+  const lastPageNumber = calculateLastPageNumber(totalCount, pageLimit);
 
   const isBackButtonVisible = page !== 1;
   const isForwardButtonVisible = page !== lastPageNumber;

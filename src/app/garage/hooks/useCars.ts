@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
-import { CARS_PAGE_LIMIT } from '@/shared/constants';
+import { GARAGE_PAGE_LIMIT } from '@/shared/constants';
 
 export const useCars = () => {
   const [page, setPage] = useState(1);
@@ -12,7 +12,7 @@ export const useCars = () => {
     totalCount: number;
   }>({
     queryKey: ['cars', page],
-    queryFn: () => garageService.getCars(page, CARS_PAGE_LIMIT),
+    queryFn: () => garageService.getCars(page, GARAGE_PAGE_LIMIT),
     placeholderData: keepPreviousData,
   });
 
