@@ -5,11 +5,9 @@ import { Body, Caption, Header, Row, Table, Car } from '@/components/ui';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
 
 const WinnersPage: FC = () => {
-  const { winners, isLoading, isSuccess, page, lastPageNumber, setPage } =
+  const { winners, isLoading, isSuccess, page, totalCount, setPage } =
     useWinners();
   const headerTitles = ['№', 'car', 'name', 'wins', 'best time (seconds)'];
-
-  console.log('page, lastPageNumber: ', page, lastPageNumber);
 
   return (
     <main>
@@ -37,9 +35,10 @@ const WinnersPage: FC = () => {
         )}
       </Table>
       <PageSelector
+        type='winners'
         page={page}
         setPage={setPage}
-        lastPage={lastPageNumber}
+        totalCount={totalCount}
       />
     </main>
   );

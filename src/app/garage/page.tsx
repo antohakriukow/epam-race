@@ -3,8 +3,8 @@
 import { FC } from 'react';
 import Toolbar from './components/toolbar/Toolbar';
 import Stadium from './components/Stadium';
-import PageTools from './components/page-tools/PageTools';
 import { useCars } from './hooks/useCars';
+import PageSelector from '@/components/ui/page-selector/PageSelector';
 
 const GaragePage: FC = () => {
   const { cars, isLoading, isSuccess, page, setPage, totalCount } = useCars();
@@ -14,7 +14,8 @@ const GaragePage: FC = () => {
       <Toolbar />
       {isLoading || !isSuccess ? null : <Stadium cars={cars} />}
       {!!cars?.length && (
-        <PageTools
+        <PageSelector
+          type='garage'
           page={page}
           setPage={setPage}
           totalCount={totalCount}

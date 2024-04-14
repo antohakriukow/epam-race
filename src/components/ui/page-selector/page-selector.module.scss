@@ -1,4 +1,11 @@
 .container {
+  @apply flex flex-row items-center justify-between;
+  > p {
+    @apply text-secondary text-2xl uppercase;
+  }
+}
+
+.selector {
   @apply flex flex-row items-center text-primary-500 text-2xl uppercase justify-end;
   > svg {
     @apply cursor-pointer;

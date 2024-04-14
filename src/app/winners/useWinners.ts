@@ -40,14 +40,9 @@ export const useWinners = () => {
     time: winner.time,
   }));
 
-  const lastPageNumber = calculateLastPageNumber(
-    data?.totalCount || 0,
-    CARS_PAGE_LIMIT,
-  );
-
   return {
     winners: preparedWinners || [],
-    lastPageNumber,
+    totalCount: data?.totalCount,
     isLoading: isLoading || isFetching,
     isSuccess,
     page,
