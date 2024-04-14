@@ -1,5 +1,3 @@
-'use client';
-
 import { FC } from 'react';
 import Border from './border/Border';
 import TechArea from './tech-area/TechArea';

@@ -1,9 +1,8 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useActions, useTypedSelector } from '@/shared/hooks';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { GARAGE_PAGE_LIMIT } from '@/shared/constants';
-import { useTypedSelector } from '@/shared/hooks/useTypedSelector';
-import { useActions } from '@/shared/hooks/useActions';
 
 export const useCars = () => {
   const { garagePageNumber } = useTypedSelector((state) => state.garage);

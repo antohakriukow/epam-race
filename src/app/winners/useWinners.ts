@@ -1,10 +1,9 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useActions, useTypedSelector } from '@/shared/hooks';
 import { winnersService } from '@/services/winners.service';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { WINNERS_PAGE_LIMIT } from '@/shared/constants';
-import { useTypedSelector } from '@/shared/hooks/useTypedSelector';
-import { useActions } from '@/shared/hooks/useActions';
 
 export const useWinners = () => {
   const { winnersPageNumber } = useTypedSelector((state) => state.winners);

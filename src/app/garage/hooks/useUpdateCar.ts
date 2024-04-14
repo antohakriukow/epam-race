@@ -1,6 +1,6 @@
-import { garageService } from '@/services/garage.service';
-import { ICarDTO } from '@/shared/types/car.types';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { ICarDTO } from '@/shared/types/car.types';
+import { garageService } from '@/services/garage.service';
 
 export const useUpdateCar = () => {
   const queryClient = useQueryClient();

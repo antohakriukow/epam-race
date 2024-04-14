@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Buckles } from '@/components/ui';
 import cn from 'clsx';
+import { Buckles } from '@/components/ui';
+import { LineType } from '@/app/garage/types';
 
 import styles from '../race-area.module.scss';
-import { LineType } from '@/app/garage/types';
 
 interface LineProps {
   type: LineType;

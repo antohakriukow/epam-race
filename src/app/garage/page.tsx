@@ -1,9 +1,9 @@
 'use client';
 
 import { FC } from 'react';
+import { useCars } from './hooks/useCars';
 import Toolbar from './components/toolbar/Toolbar';
 import Stadium from './components/Stadium';
-import { useCars } from './hooks/useCars';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
 
 const GaragePage: FC = () => {
