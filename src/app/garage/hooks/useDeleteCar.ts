@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useTypedSelector } from '@/shared/hooks';
 import { garageService } from '@/services/garage.service';
+import { winnersService } from '@/services/winners.service';
 
 export const useDeleteCar = () => {
   const { garagePageNumber } = useTypedSelector((state) => state.garage);
@@ -8,7 +9,11 @@ export const useDeleteCar = () => {
 
   const { mutate: deleteCar } = useMutation({
     mutationKey: ['delete car'],
-    mutationFn: (id: string) => garageService.deleteCar(id),
+    mutationFn: (id: string) =>
+      Promise.all([
+        garageService.deleteCar(id),
+        winnersService.deleteWinner(id),
+      ]),
     onSuccess() {
       queryClient.invalidateQueries({
         queryKey: ['cars', garagePageNumber],
