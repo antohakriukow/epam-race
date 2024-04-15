@@ -25,7 +25,10 @@ export const useEngine = () => {
       if (providedStatus === EngineStatus.STARTED)
         setStatus(EngineStatus.STARTED);
       if (providedStatus === EngineStatus.DRIVE) setStatus(EngineStatus.DRIVE);
-      if (providedStatus === EngineStatus.STOPPED) clearEngineState();
+      if (providedStatus === EngineStatus.STOPPED) {
+        await setStatus(EngineStatus.STOPPED);
+        clearEngineState();
+      }
 
       return engineService.setStatus(id, providedStatus);
     },
