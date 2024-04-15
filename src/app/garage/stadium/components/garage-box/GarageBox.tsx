@@ -4,12 +4,21 @@ import CarButtons from './components/CarButtons';
 import EngineButtons from './components/EngineButtons';
 
 import styles from './garage-box.module.scss';
+import { ISingleRaceData } from '@/app/garage/types';
+import { PARKING_LENGTH } from '@/shared/constants';
 
-const GarageBox: FC<ICarId> = ({ id }) => {
+interface Props extends ICarId {
+  singleRaceData: ISingleRaceData;
+}
+
+const GarageBox: FC<Props> = ({ id, singleRaceData }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ paddingRight: PARKING_LENGTH }}
+    >
       <CarButtons id={id} />
-      <EngineButtons id={id} />
+      <EngineButtons singleRaceData={singleRaceData} />
     </div>
   );
 };

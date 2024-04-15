@@ -1,9 +1,15 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import cn from 'clsx';
 import { Buckles } from '@/components/ui';
 import { LineType } from '@/app/garage/types';
 
 import styles from './line.module.scss';
+import {
+  CAR_LENGTH,
+  GARAGE_LENGTH,
+  START_LINE_WIDTH,
+} from '@/shared/constants';
+import { getStringInPixels } from '@/shared/utils/getStringInPixels';
 
 interface LineProps {
   type: LineType;
@@ -12,11 +18,18 @@ interface LineProps {
 const Line: FC<LineProps> = ({ type }) => {
   const isStartLine = type === LineType.START;
 
+  const width = { width: getStringInPixels(START_LINE_WIDTH) };
+  const startLineCSSProps = { left: getStringInPixels(GARAGE_LENGTH) };
+  const finishLineCSSProps = { right: getStringInPixels(CAR_LENGTH) };
+  const position = isStartLine ? startLineCSSProps : finishLineCSSProps;
+  const CSSProps: CSSProperties = { ...width, ...position };
+
   return (
     <div
       className={cn(styles.line, {
         [styles.start]: isStartLine,
       })}
+      style={CSSProps}
     >
       <Buckles
         color='#fff'

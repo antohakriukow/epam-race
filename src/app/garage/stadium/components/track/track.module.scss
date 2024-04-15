@@ -1,15 +1,25 @@
 @import '../../../../../shared/styles/mixins.scss';
 
-.track {
-  @apply flex flex-row py-1 w-full border-b-white border-t-white border-b-2 box-border;
+.container {
+  @apply flex flex-row;
+}
 
-  > svg {
-    @apply w-12 z-20;
-    transform: translateX(-82px);
-  }
+.track {
+  @apply relative flex flex-row py-1 w-full border-b-white border-t-white border-b-2 box-border;
 
   > p {
-    @apply text-white text-2xl self-center;
+    @apply text-white text-2xl pl-6 self-center;
     @include font-codystar;
+
+    @media (max-width: '740px') {
+      @apply text-lg;
+    }
+    @media (max-width: '640px') {
+      @apply text-base;
+    }
   }
+}
+
+.car {
+  @apply absolute z-20;
 }

@@ -2,13 +2,18 @@ import { FC } from 'react';
 
 interface Props {
   color: string;
+  id?: string;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
-const Car: FC<Props> = ({ color }) => (
+const Car: FC<Props> = ({ color, id, style, className }) => (
   <svg
+    id={id}
+    className={className}
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 616 348'
-    style={{ height: '100%' }}
+    style={{ height: '100%', ...style }}
   >
     <rect
       x='8'

@@ -1,6 +1,5 @@
 .container {
   @apply flex flex-row self-center;
-  transform: translateX(-90px);
 
   > div {
     @apply mr-2;

@@ -1,17 +1,19 @@
-'use client';
-
 import { FC } from 'react';
 import Line from './components/line/Line';
 import Track from './components/track/Track';
 import { LineType } from '../types';
 
 import styles from './stadium.module.scss';
-import { useCars } from '../hooks';
 import EmptyStadium from './components/empty-stadium/EmptyStadium';
+import { ICar } from '@/shared/types/car.types';
 
-const Stadium: FC = () => {
-  const { cars, isSuccess, isLoading } = useCars();
+interface Props {
+  cars: ICar[];
+  isSuccess: boolean;
+  isLoading: boolean;
+}
 
+const Stadium: FC<Props> = ({ cars, isSuccess, isLoading }) => {
   if (!isSuccess || isLoading) return <EmptyStadium />;
 
   return (

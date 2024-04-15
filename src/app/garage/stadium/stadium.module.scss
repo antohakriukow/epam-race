@@ -5,7 +5,7 @@
 }
 
 .tracks {
-  @apply pl-[96px] relative h-full w-full grid box-border;
+  @apply relative h-full w-full grid box-border;
   grid-template-rows: repeat(1fr);
 }
 

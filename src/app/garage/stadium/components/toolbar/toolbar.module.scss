@@ -3,7 +3,7 @@
 .container {
   @apply flex flex-row items-center justify-between;
 
-  @media (max-width: 780px) {
+  @media (max-width: 860px) {
     @apply inline-flex flex-wrap;
   }
 

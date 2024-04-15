@@ -1,20 +1,18 @@
 import { FC } from 'react';
 import { Button } from '@/components/ui';
-import { ICarId } from '@/shared/types/car.types';
 import { COLOR_YELLOW } from '@/shared/styles/colors';
-import { useEngine } from '@/app/garage/hooks';
+import { ISingleRaceData } from '@/app/garage/types';
 import { EngineStatus } from '@/shared/types/engine.types';
 
-const EngineButtons: FC<ICarId> = ({ id }) => {
-  const { engine, setEngineStatus } = useEngine();
-  const isEngineStarted = !!engine?.velocity && engine?.velocity > 0;
-  const isEngineStopped = !isEngineStarted;
+interface Props {
+  singleRaceData: ISingleRaceData;
+}
 
-  const handleStartEngine = () =>
-    setEngineStatus({ id, status: EngineStatus.STARTED });
+const EngineButtons: FC<Props> = ({ singleRaceData }) => {
+  const { engine, handleStart, handleStop } = singleRaceData;
 
-  const handleStopEngine = () =>
-    setEngineStatus({ id, status: EngineStatus.STOPPED });
+  const isStopButtonDisabled = engine?.status === EngineStatus.STOPPED;
+  const isStartButtonDisabled = !isStopButtonDisabled;
 
   return (
     <div>
@@ -22,15 +20,15 @@ const EngineButtons: FC<ICarId> = ({ id }) => {
         iconName='MdOutlinePlayArrow'
         size='S'
         color={COLOR_YELLOW}
-        onClick={handleStartEngine}
-        disabled={isEngineStarted}
+        onClick={handleStart}
+        disabled={isStartButtonDisabled}
       />
       <Button
         iconName='MdStop'
         size='S'
         color={COLOR_YELLOW}
-        onClick={handleStopEngine}
-        disabled={isEngineStopped}
+        onClick={handleStop}
+        disabled={isStopButtonDisabled}
       />
     </div>
   );

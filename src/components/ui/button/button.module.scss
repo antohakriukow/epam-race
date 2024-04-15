@@ -1,5 +1,5 @@
 .button {
-  @apply flex flex-row uppercase items-center justify-center gap-2 ring-0 border-2 p-2;
+  @apply flex flex-row uppercase items-center justify-center gap-2 ring-0 border-2 p-2 whitespace-nowrap;
   line-height: 1;
 }
 

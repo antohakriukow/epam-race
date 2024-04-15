@@ -1,6 +1,6 @@
 .line {
-  @apply z-10 absolute right-[44px] h-full flex flex-col w-6 items-center justify-between mx-2 border-l-white border-r-success box-border;
-  background: '#182051';
+  @apply z-10 absolute h-full flex flex-col items-center justify-between border-l-white border-r-success box-border;
+  background-color: rgba(24, 32, 81, 1);
   border-right-width: 2px;
   border-left-width: 2px;
 
@@ -13,5 +13,5 @@
 }
 
 .start {
-  @apply border-r-neutral left-[148px];
+  @apply border-r-neutral;
 }
