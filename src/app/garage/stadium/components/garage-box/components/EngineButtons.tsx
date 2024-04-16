@@ -11,7 +11,9 @@ interface Props {
 const EngineButtons: FC<Props> = ({ singleRaceData }) => {
   const { engine, handleStart, handleStop } = singleRaceData;
 
-  const isStopButtonDisabled = engine?.status === EngineStatus.STOPPED;
+  const isStopButtonDisabled = !!engine
+    ? engine.status === EngineStatus.STOPPED
+    : true;
   const isStartButtonDisabled = !isStopButtonDisabled;
 
   return (

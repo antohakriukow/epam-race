@@ -2,19 +2,16 @@ import { EngineStatus } from '@/shared/types/engine.types';
 import { useEngine } from './useEngine';
 
 export const useSingleRace = (id: string) => {
-  const { engine, setEngineStatus } = useEngine();
+  const { setEngineStatus } = useEngine();
 
-  const handleStartEngine = async () => {
-    return setEngineStatus({ id, providedStatus: EngineStatus.STARTED });
-  };
+  const handleStartEngine = () =>
+    setEngineStatus({
+      id,
+      providedStatus: EngineStatus.STARTED,
+    });
 
-  const handleStopEngine = async () => {
-    return setEngineStatus({ id, providedStatus: EngineStatus.STOPPED });
-  };
-
-  const handleStartDriving = async () => {
-    return setEngineStatus({ id, providedStatus: EngineStatus.DRIVE });
-  };
+  const handleStartDriving = () =>
+    setEngineStatus({ id: id, providedStatus: EngineStatus.DRIVE });
 
   const handleStart = async () => {
     try {
@@ -23,9 +20,11 @@ export const useSingleRace = (id: string) => {
     } catch (error) {}
   };
 
-  return {
-    engine,
-    handleStart,
-    handleStop: handleStopEngine,
-  };
+  const handleStop = () =>
+    setEngineStatus({
+      id: id,
+      providedStatus: EngineStatus.STOPPED,
+    });
+
+  return { handleStart, handleStop };
 };

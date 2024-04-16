@@ -4,3 +4,4 @@ export { useDeleteCar } from './useDeleteCar';
 export { useGenerateCars } from './useGenerateCars';
 export { useUpdateCar } from './useUpdateCar';
 export { useEngine } from './useEngine';
+export { useSingleRace } from './useSingleRace';

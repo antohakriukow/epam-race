@@ -9,10 +9,11 @@ import Border from './stadium/components/border/Border';
 
 const GaragePage: FC = () => {
   const { page, setPage, totalCount, cars, isSuccess, isLoading } = useCars();
+  const carIds = cars.map((car) => car.id);
 
   return (
     <main>
-      <Toolbar />
+      <Toolbar carIds={carIds} />
       <Border>
         <Stadium
           cars={cars}

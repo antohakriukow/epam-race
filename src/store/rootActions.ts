@@ -11,6 +11,12 @@ import {
   clearUpdatingCarStore,
 } from './garage/garage.slice';
 
+import {
+  setEngineStatus,
+  setRaceData,
+  clearEnginesState,
+} from './engines/engines.slice';
+
 export const rootActions = {
   setWinnersPageNumber,
 
@@ -22,4 +28,8 @@ export const rootActions = {
   setCreatingCarColor,
   clearCreatingCarStore,
   clearUpdatingCarStore,
+
+  setEngineStatus,
+  setRaceData,
+  clearEnginesState,
 };

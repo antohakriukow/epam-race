@@ -4,10 +4,15 @@ import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 
 import styles from '../header.module.scss';
+import { useActions } from '@/shared/hooks';
 
 const Navigation: FC = () => {
+  const { clearEnginesState } = useActions();
   const router = useRouter();
-  const goToGarage = () => router.push('/garage', undefined);
+  const goToGarage = () => {
+    clearEnginesState();
+    router.push('/garage', undefined);
+  };
   const goToWinners = () => router.push('/winners', undefined);
 
   return (

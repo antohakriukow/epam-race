@@ -6,7 +6,7 @@ export const enum LineType {
 }
 
 export interface ISingleRaceData {
-  engine: IEngine | undefined;
+  engine: IEngine;
   handleStart: () => void;
   handleStop: () => void;
 }

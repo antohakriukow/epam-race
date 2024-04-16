@@ -11,3 +11,7 @@ export interface IEngine {
   success?: boolean;
   status?: EngineStatus;
 }
+
+export interface IEngineWithId extends IEngine {
+  id: string;
+}
