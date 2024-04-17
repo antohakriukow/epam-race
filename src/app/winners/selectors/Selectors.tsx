@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import Select, { SingleValue } from 'react-select';
 import {
   OptionType,
@@ -10,12 +10,13 @@ import {
 
 import styles from './selectors.module.scss';
 import { useSelectors } from './useSelectors';
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 
 interface Props {
   sortParam: SortParam;
-  setSortParam: Dispatch<SetStateAction<SortParam>>;
+  setSortParam: ActionCreatorWithPayload<SortParam, 'winners/setSortParam'>;
   sortOrder: SortOrder;
-  setSortOrder: Dispatch<SetStateAction<SortOrder>>;
+  setSortOrder: ActionCreatorWithPayload<SortOrder, 'winners/setSortOrder'>;
 }
 
 const Selectors: FC<Props> = ({

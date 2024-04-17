@@ -14,10 +14,11 @@ export const useEngine = () => {
     setEngineStatus({ id, status: EngineStatus.STOPPED });
   };
 
-  const { _, mutate: setEngineStatusAsync } = useMutation<
-    EngineMutationResponse,
-    Error,
-    EngineMutationParams
+  //prettier-ignore
+  const { mutate: setEngineStatusAsync } = useMutation<
+  EngineMutationResponse,
+  Error,
+  EngineMutationParams
   >({
     mutationFn: async ({ id, providedStatus }) => {
       if (providedStatus === EngineStatus.STARTED)
