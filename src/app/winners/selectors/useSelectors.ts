@@ -1,5 +1,9 @@
 import { StylesConfig } from 'react-select';
-import { SortOrder, SortParam, OptionType } from '../types';
+import {
+  SortOrder,
+  SortParam,
+  OptionType,
+} from '@/shared/types/winners-page.types';
 
 export const useSelectors = () => {
   const customStyles: StylesConfig<OptionType, boolean> = {

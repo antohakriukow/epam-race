@@ -16,7 +16,11 @@ import {
   clearUpdatingCarStore,
 } from './garage/garage.slice';
 
-import { setWinnersPageNumber } from './winners/winners.slice';
+import {
+  setWinnersPageNumber,
+  setSortParam,
+  setSortOrder,
+} from './winners/winners.slice';
 
 export const rootActions = {
   setEngineStatus,
@@ -34,4 +38,6 @@ export const rootActions = {
   clearUpdatingCarStore,
 
   setWinnersPageNumber,
+  setSortParam,
+  setSortOrder,
 };

@@ -1,10 +1,8 @@
-import { useState } from 'react';
-import { SortOrder, SortParam } from './types';
-import { useWinners } from '@/hooks';
+import { useActions, useTypedSelector, useWinners } from '@/hooks';
 
 export const useWinnersPage = () => {
-  const [sortParam, setSortParam] = useState<SortParam>(() => SortParam.WINS);
-  const [sortOrder, setSortOrder] = useState<SortOrder>(() => SortOrder.DESC);
+  const { sortParam, sortOrder } = useTypedSelector((state) => state.winners);
+  const { setSortParam, setSortOrder } = useActions();
   const headerTitles = ['№', 'car', 'name', 'wins', 'best time (seconds)'];
 
   const {

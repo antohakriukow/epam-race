@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import Line from './components/line/Line';
 import Track from './components/track/Track';
-import { LineType } from '../types';
 
 import styles from './stadium.module.scss';
 import EmptyStadium from './components/empty-stadium/EmptyStadium';
 import { ICar } from '@/shared/types/car.types';
+import { LineType } from '@/shared/types/garage-page.types';
 
 interface Props {
   cars: ICar[];

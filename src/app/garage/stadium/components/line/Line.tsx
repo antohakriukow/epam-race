@@ -1,7 +1,6 @@
 import { CSSProperties, FC } from 'react';
 import cn from 'clsx';
 import { Buckles } from '@/components/ui';
-import { LineType } from '@/app/garage/types';
 import { getStringInPixels } from '@/shared/utils/getStringInPixels';
 import {
   CAR_LENGTH,
@@ -10,6 +9,7 @@ import {
 } from '@/shared/constants';
 
 import styles from './line.module.scss';
+import { LineType } from '@/shared/types/garage-page.types';
 
 interface LineProps {
   type: LineType;

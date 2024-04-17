@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Line from '../line/Line';
-import { LineType } from '@/app/garage/types';
 
 import styles from '../../stadium.module.scss';
+import { LineType } from '@/shared/types/garage-page.types';
 
 const EmptyStadium: FC = () => {
   return (

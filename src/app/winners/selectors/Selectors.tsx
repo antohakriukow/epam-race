@@ -2,7 +2,11 @@
 
 import { Dispatch, FC, SetStateAction } from 'react';
 import Select, { SingleValue } from 'react-select';
-import { OptionType, SortOrder, SortParam } from '../types';
+import {
+  OptionType,
+  SortOrder,
+  SortParam,
+} from '@/shared/types/winners-page.types';
 
 import styles from './selectors.module.scss';
 import { useSelectors } from './useSelectors';
