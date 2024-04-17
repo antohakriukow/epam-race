@@ -1,4 +1,4 @@
-import { SortOrder, SortParam } from './../app/winners/types';
+import { SortOrder, SortParam } from '@/shared/types/winners-page.types';
 import { useQuery } from '@tanstack/react-query';
 import { useActions, useTypedSelector } from '@/hooks';
 import { winnersService } from '@/services/winners.service';

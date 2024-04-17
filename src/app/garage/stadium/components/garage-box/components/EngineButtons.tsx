@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Button } from '@/components/ui';
-import { ISingleRaceData } from '@/app/garage/types';
+import { ISingleRaceData } from '@/shared/types/garage-page.types';
 import { EngineStatus } from '@/shared/types/engine.types';
 import { COLOR_YELLOW } from '@/shared/styles/colors';
 

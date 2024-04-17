@@ -2,7 +2,7 @@ import { FC } from 'react';
 import CarButtons from './components/CarButtons';
 import EngineButtons from './components/EngineButtons';
 import { ICarId } from '@/shared/types/car.types';
-import { ISingleRaceData } from '@/app/garage/types';
+import { ISingleRaceData } from '@/shared/types/garage-page.types';
 import { PARKING_LENGTH } from '@/shared/constants';
 
 import styles from './garage-box.module.scss';

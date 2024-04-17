@@ -2,7 +2,6 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { IGarageState } from './garage.interface';
 import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
 import { ICar } from '@/shared/types/car.types';
-import { SortOrder, SortParam } from '@/shared/types/winners-page.types';
 
 const initialState: IGarageState = {
   garagePageNumber: 1,
