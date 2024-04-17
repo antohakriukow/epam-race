@@ -1,16 +1,35 @@
 'use client';
 import { FC } from 'react';
-import { useWinners } from '@/hooks';
 import { Body, Caption, Header, Row, Table, Car } from '@/components/ui';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
+import Selectors from './selectors/Selectors';
+import { useWinnersPage } from './useWinnersPage';
 
 const WinnersPage: FC = () => {
-  const { winners, isLoading, isSuccess, page, totalCount, setPage } =
-    useWinners();
-  const headerTitles = ['№', 'car', 'name', 'wins', 'best time (seconds)'];
+  const {
+    headerTitles,
+
+    winners,
+    isLoading,
+    isSuccess,
+    page,
+    totalCount,
+    setPage,
+
+    sortParam,
+    sortOrder,
+    setSortParam,
+    setSortOrder,
+  } = useWinnersPage();
 
   return (
     <main>
+      <Selectors
+        sortParam={sortParam}
+        setSortParam={setSortParam}
+        sortOrder={sortOrder}
+        setSortOrder={setSortOrder}
+      />
       <Table>
         <Caption title='winners' />
         <Header headerTitles={headerTitles} />

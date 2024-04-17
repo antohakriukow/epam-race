@@ -1,3 +1,4 @@
+import { SortOrder, SortParam } from './../app/winners/types';
 import { useQuery } from '@tanstack/react-query';
 import { useActions, useTypedSelector } from '@/hooks';
 import { winnersService } from '@/services/winners.service';
@@ -5,7 +6,7 @@ import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { WINNERS_PAGE_LIMIT } from '@/shared/constants';
 
-export const useWinners = () => {
+export const useWinners = (sortParam: SortParam, sortOrder: SortOrder) => {
   const { winnersPageNumber } = useTypedSelector((state) => state.winners);
   const { setWinnersPageNumber } = useActions();
 
@@ -13,15 +14,14 @@ export const useWinners = () => {
     data: ICar[];
     totalCount: number;
   }>({
-    queryKey: ['winners', winnersPageNumber],
+    queryKey: ['winners', winnersPageNumber, sortParam, sortOrder],
     queryFn: async () => {
       const response = await winnersService.getWinners(
         winnersPageNumber,
         WINNERS_PAGE_LIMIT,
-        'wins',
-        'DESC',
+        sortParam,
+        sortOrder,
       );
-      console.log('WINNERS: ', response);
       const updatedWinners = await Promise.all(
         response.data.map(async (winner) => {
           const carData = await garageService.getCar(winner.id);
