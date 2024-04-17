@@ -1,5 +1,3 @@
-@import '../../../shared/styles/mixins.scss';
-
 .caption {
   @apply text-primary-100 text-left text-5xl uppercase;
 }
@@ -36,7 +34,6 @@
   grid-template-columns: 40px 70px 1fr 50px 180px;
   > td {
     @apply text-white uppercase text-xl font-bold max-h-8 overflow-hidden overflow-ellipsis;
-    @include font-codystar;
   }
 }
 

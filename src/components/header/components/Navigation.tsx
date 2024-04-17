@@ -11,7 +11,7 @@ const Navigation: FC = () => {
   const router = useRouter();
   const goToGarage = () => {
     clearRaceState();
-    router.push('/garage', undefined);
+    router.push('/', undefined);
   };
   const goToWinners = () => router.push('/winners', undefined);
 

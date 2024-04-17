@@ -1,5 +1,3 @@
-@import '../../../../../shared/styles/mixins.scss';
-
 .container {
   @apply flex flex-row;
 }
@@ -9,7 +7,6 @@
 
   > p {
     @apply text-white text-2xl pl-6 self-center;
-    @include font-codystar;
 
     @media (max-width: '740px') {
       @apply text-lg;

@@ -18,7 +18,7 @@ const Stadium: FC<Props> = ({ cars, isSuccess, isLoading }) => {
 
   return (
     <div className={styles.container}>
-      <Line type={LineType.START} />
+      {!!cars.length && <Line type={LineType.START} />}
       <div
         id='tracks'
         className={styles.tracks}
@@ -32,7 +32,7 @@ const Stadium: FC<Props> = ({ cars, isSuccess, isLoading }) => {
             />
           ))}
       </div>
-      <Line type={LineType.FINISH} />
+      {!!cars.length && <Line type={LineType.FINISH} />}
     </div>
   );
 };

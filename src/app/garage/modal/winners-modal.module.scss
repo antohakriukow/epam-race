@@ -1,5 +1,3 @@
-@import '../../../shared/styles/mixins.scss';
-
 .container {
   @apply h-screen w-screen flex flex-row items-center justify-center;
 }
@@ -10,7 +8,6 @@
 
 .modal {
   @apply flex flex-col items-center justify-center text-center w-96 h-96 border-4 border-primary-500 rounded-3xl text-4xl p-4;
-  @include font-codystar;
 
   > h3 {
     @apply text-neutral;

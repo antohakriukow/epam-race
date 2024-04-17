@@ -9,10 +9,10 @@ import styles from './not-found.module.scss';
 
 const NotFoundContent: FC = () => {
   const router = useRouter();
-  const goToGarage = () => router.push('/garage', undefined);
+  const goToGarage = () => router.push('/', undefined);
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <div>
         <h2>Page Not Found</h2>
         <p>Press the button to go to Homepage</p>
@@ -24,7 +24,7 @@ const NotFoundContent: FC = () => {
         onClick={goToGarage}
       />
       ;
-    </div>
+    </main>
   );
 };
 export default NotFoundContent;

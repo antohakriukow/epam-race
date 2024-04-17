@@ -2,10 +2,10 @@
 
 import { FC } from 'react';
 import { useCars } from '@/hooks';
-import Toolbar from './stadium/components/toolbar/Toolbar';
-import Stadium from './stadium/Stadium';
+import Toolbar from './garage/stadium/components/toolbar/Toolbar';
+import Stadium from './garage/stadium/Stadium';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
-import Border from './stadium/components/border/Border';
+import Border from './garage/stadium/components/border/Border';
 
 const GaragePage: FC = () => {
   const { page, setPage, totalCount, cars, isSuccess, isLoading } = useCars();

@@ -2,6 +2,9 @@ import { ChangeEvent, FC } from 'react';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
+import { Codystar } from 'next/font/google';
+
+const CodystarFont = Codystar({ subsets: ['latin'], weight: '400' });
 
 import styles from './car-form.module.scss';
 
@@ -35,6 +38,7 @@ const CarForm: FC<Props> = ({
   return (
     <div className={styles.container}>
       <input
+        className={CodystarFont.className}
         type='text'
         placeholder='type car brand'
         value={textInputValue || ''}

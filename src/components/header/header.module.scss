@@ -1,5 +1,4 @@
 @import '../../shared/styles/colors.scss';
-@import '../../shared/styles/mixins.scss';
 
 .container {
   @apply grid pt-12 mb-24;
@@ -46,7 +45,6 @@
 
   > h1 {
     @apply flex flex-col items-center justify-center uppercase text-white pt-4;
-    @include font-codystar;
     font-size: 52px;
     line-height: 52px;
     > span:nth-of-type(1) {

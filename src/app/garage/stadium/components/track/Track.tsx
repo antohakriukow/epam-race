@@ -5,6 +5,9 @@ import { Car } from '@/components/ui';
 import { useTrack } from './useTrack';
 import { ICar } from '@/shared/types/car.types';
 import { carLength, startCarPosition } from '@/shared/constants';
+import { Codystar } from 'next/font/google';
+
+const CodystarFont = Codystar({ subsets: ['latin'], weight: '400' });
 
 import styles from './track.module.scss';
 
@@ -29,7 +32,7 @@ const Track: FC<Props> = memo(({ car, isFirst }) => {
             [styles.firstTrack]: isFirst,
           })}
         >
-          <p>{car.name}</p>
+          <p className={CodystarFont.className}>{car.name}</p>
           <Car
             id={`car-${car.id}`}
             className={styles.car}
