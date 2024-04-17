@@ -17,7 +17,6 @@ export const useWinnerDetector = (cars: ICar[]) => {
 
   useEffect(() => {
     if (winner) {
-      console.log('useWinnerDetector winner: ', winner);
       createWinner(winner);
       const timer = setTimeout(() => {
         setWinner(null);

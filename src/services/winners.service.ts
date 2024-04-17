@@ -28,7 +28,6 @@ class WinnersService {
   }
 
   async createWinner(winnerData: IWinnerDTO): Promise<IWinnerDTO> {
-    console.log('createWinner DTO: ', winnerData);
     const response = await configuredAxios.post<IWinnerDTO>(
       this.BASE_URL,
       winnerData,
@@ -37,7 +36,6 @@ class WinnersService {
   }
 
   async updateWinner(winnerData: IWinnerDTO): Promise<IWinnerDTO> {
-    console.log('updateWinner DTO: ', winnerData);
     const response = await configuredAxios.put<IWinnerDTO>(
       `${this.BASE_URL}/${winnerData.id}`,
       { wins: winnerData.wins, time: winnerData.time },
