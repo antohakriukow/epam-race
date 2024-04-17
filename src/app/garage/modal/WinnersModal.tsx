@@ -1,14 +1,11 @@
 import { FC } from 'react';
 import ModalPortal from '@/components/ui/modal/ModalPortal';
-import { useTypedSelector } from '@/shared/hooks';
+import { useTypedSelector } from '@/hooks';
 
 import styles from './winners-modal.module.scss';
 
 const WinnersModal: FC = () => {
-  const { winner, engines } = useTypedSelector((state) => state.engines);
-
-  console.log('engines: ', engines);
-  console.log('winner: ', winner);
+  const { winner } = useTypedSelector((state) => state.engines);
 
   if (!winner?.velocity || !winner.distance) return null;
 

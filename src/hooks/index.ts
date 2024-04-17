@@ -13,3 +13,4 @@ export { useGroupRace } from './useGroupRace';
 export { useWinnerDetector } from './useWinnerDetector';
 
 export { useWinners } from './useWinners';
+export { useCreateWinner } from './useCreateWinner';

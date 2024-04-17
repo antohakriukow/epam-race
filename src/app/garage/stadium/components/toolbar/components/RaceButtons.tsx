@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500, COLOR_SUCCESS } from '@/shared/styles/colors';
-import { useGroupRace, useWinnerDetector } from '@/shared/hooks';
+import { useGroupRace, useWinnerDetector } from '@/hooks';
 import { ICar } from '@/shared/types/car.types';
 import WinnersModal from '@/app/garage/modal/WinnersModal';
 

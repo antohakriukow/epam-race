@@ -8,7 +8,7 @@ import { carLength, startCarPosition } from '@/shared/constants';
 import styles from './track.module.scss';
 import CarAnimation from '@/shared/utils/carAnimation';
 import { EngineStatus } from '@/shared/types/engine.types';
-import { useTypedSelector, useSingleRace } from '@/shared/hooks';
+import { useTypedSelector, useSingleRace } from '@/hooks';
 
 interface Props {
   car: ICar;

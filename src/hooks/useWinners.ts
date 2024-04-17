@@ -1,5 +1,5 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query';
-import { useActions, useTypedSelector } from '@/shared/hooks';
+import { useQuery } from '@tanstack/react-query';
+import { useActions, useTypedSelector } from '@/hooks';
 import { winnersService } from '@/services/winners.service';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
@@ -21,6 +21,7 @@ export const useWinners = () => {
         'wins',
         'DESC',
       );
+      console.log('WINNERS: ', response);
       const updatedWinners = await Promise.all(
         response.data.map(async (winner) => {
           const carData = await garageService.getCar(winner.id);
@@ -29,7 +30,6 @@ export const useWinners = () => {
       );
       return { data: updatedWinners, totalCount: response.totalCount };
     },
-    placeholderData: keepPreviousData,
   });
 
   const preparedWinners = data?.data?.map((winner) => ({

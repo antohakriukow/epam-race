@@ -1,5 +1,5 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-import { useActions, useTypedSelector } from '@/shared/hooks';
+import { useActions, useTypedSelector } from '@/hooks';
 import { garageService } from '@/services/garage.service';
 import { ICar } from '@/shared/types/car.types';
 import { GARAGE_PAGE_LIMIT } from '@/shared/constants';

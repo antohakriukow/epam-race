@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 import { engineService } from '@/services/engine.service';
 import { EngineStatus, IEngine } from '@/shared/types/engine.types';
-import { useActions } from '@/shared/hooks';
+import { useActions } from '@/hooks';
 
 type EngineMutationParams = { id: string; providedStatus: EngineStatus };
 type EngineMutationResponse = { id: string; data: IEngine };

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui';
-import { useActions } from '@/shared/hooks';
+import { useActions } from '@/hooks';
 import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 
 import styles from '../header.module.scss';

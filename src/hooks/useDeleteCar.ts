@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { useTypedSelector } from '@/shared/hooks';
+import { useTypedSelector } from '@/hooks';
 import { garageService } from '@/services/garage.service';
 import { winnersService } from '@/services/winners.service';
 

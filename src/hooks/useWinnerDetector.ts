@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
-import { ICar } from '../types/car.types';
+import { ICar } from '../shared/types/car.types';
 import { useActions } from './useActions';
 import { useTypedSelector } from './useTypedSelector';
+import { useCreateWinner } from './useCreateWinner';
 
 export const useWinnerDetector = (cars: ICar[]) => {
   const { setWinner } = useActions();
   const { winner } = useTypedSelector((state) => state.engines);
   const [isWinnerDetectorOn, setIsWinnerDetectorOn] = useState(false);
+  const createWinner = useCreateWinner();
 
   const handleWinner = (id: string) => {
     const carData = cars.find((car) => car.id.toString() === id.toString());
@@ -15,12 +17,14 @@ export const useWinnerDetector = (cars: ICar[]) => {
 
   useEffect(() => {
     if (winner) {
+      console.log('useWinnerDetector winner: ', winner);
+      createWinner(winner);
       const timer = setTimeout(() => {
         setWinner(null);
-      }, 4000);
+      }, 2000);
       return () => clearTimeout(timer);
     }
-  }, [winner, setWinner]);
+  }, [winner, setWinner, createWinner]);
 
   useEffect(() => {
     const targetNode = document.getElementById('tracks');

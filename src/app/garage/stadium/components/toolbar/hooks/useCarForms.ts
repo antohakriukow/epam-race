@@ -3,7 +3,7 @@ import {
   useUpdateCar,
   useActions,
   useTypedSelector,
-} from '@/shared/hooks';
+} from '@/hooks';
 
 export const useCarForms = () => {
   const { createCar } = useCreateCar();
