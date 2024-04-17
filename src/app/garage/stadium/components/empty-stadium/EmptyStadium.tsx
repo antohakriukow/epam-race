@@ -8,7 +8,7 @@ const EmptyStadium: FC = () => {
   return (
     <div
       className={styles.container}
-      style={{ height: '574px' }}
+      style={{ height: '504px' }}
     >
       <Line type={LineType.START} />
       <Line type={LineType.FINISH} />

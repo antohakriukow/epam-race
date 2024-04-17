@@ -1,7 +1,3 @@
-.caption {
-  @apply text-primary-100 text-left text-5xl uppercase;
-}
-
 .body {
   @apply border-primary-500 border-b-[3px];
 }
@@ -38,9 +34,6 @@
 }
 
 @media (max-width: 680px) {
-  .caption {
-    @apply text-3xl;
-  }
   .header {
     @apply text-base;
     > tr {

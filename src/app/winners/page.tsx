@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { Body, Caption, Header, Row, Table, Car } from '@/components/ui';
+import { Body, Header, Row, Table, Car, Heading } from '@/components/ui';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
 import Selectors from './selectors/Selectors';
 import { useWinnersPage } from './useWinnersPage';
@@ -24,6 +24,7 @@ const WinnersPage: FC = () => {
 
   return (
     <main>
+      <Heading title='winners' />
       <Selectors
         sortParam={sortParam}
         setSortParam={setSortParam}
@@ -31,7 +32,6 @@ const WinnersPage: FC = () => {
         setSortOrder={setSortOrder}
       />
       <Table>
-        <Caption title='winners' />
         <Header headerTitles={headerTitles} />
         {isLoading || !isSuccess || !winners?.length ? null : (
           <Body>

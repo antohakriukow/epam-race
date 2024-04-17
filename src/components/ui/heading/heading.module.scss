@@ -1,0 +1,6 @@
+.heading {
+  @apply text-primary-100 text-left text-5xl uppercase;
+  @media (max-width: 680px) {
+    @apply text-3xl;
+  }
+}

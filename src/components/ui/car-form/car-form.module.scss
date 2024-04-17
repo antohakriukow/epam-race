@@ -3,7 +3,7 @@
     @apply mr-3 cursor-pointer;
 
     &[type='text'] {
-      @apply text-sm text-primary-500 uppercase font-semibold px-2 py-1 max-w-36 rounded-md ring-0 border-none outline-none;
+      @apply text-sm text-third uppercase font-semibold px-2 py-1 max-w-36 rounded-md ring-0 border-none outline-none;
     }
     &[type='color'] {
       @apply w-4 h-5;

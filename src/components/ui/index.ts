@@ -1,9 +1,9 @@
 export { default as MaterialIcon } from './MaterialIcon';
 
+export { default as Heading } from './heading/Heading';
 export { default as Button } from './button/Button';
 
 export { default as Table } from './table/Table';
-export { default as Caption } from './table/Caption';
 export { default as Header } from './table/Header';
 export { default as Body } from './table/Body';
 export { default as Row } from './table/Row';
