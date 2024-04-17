@@ -22,13 +22,16 @@ const Selectors: FC<Props> = ({
 }) => {
   const { customStyles, sortParams, sortOrders } = useSelectors();
 
-  const handleSortParamChange = (selectedOption: SingleValue<OptionType>) => {
-    if (selectedOption) setSortParam(selectedOption.value as SortParam);
-  };
+  const handleSortParamChange = (selectedOption: SingleValue<OptionType>) =>
+    setSortParam(selectedOption?.value as SortParam);
 
-  const handleSortOrderChange = (selectedOption: SingleValue<OptionType>) => {
-    if (selectedOption) setSortOrder(selectedOption.value as SortOrder);
-  };
+  const handleSortOrderChange = (selectedOption: SingleValue<OptionType>) =>
+    setSortOrder(selectedOption?.value as SortOrder);
+
+  const getLabel = (option: OptionType) => option.label;
+  const getValue = (option: OptionType) => option.value.toString();
+  const paramsValue = sortParams.find((option) => option.value === sortParam);
+  const orderValue = sortOrders.find((option) => option.value === sortOrder);
 
   return (
     <div className={styles.container}>
@@ -36,10 +39,10 @@ const Selectors: FC<Props> = ({
         <p>sort by</p>
         <Select<OptionType>
           options={sortParams}
-          value={sortParams.find((option) => option.value === sortParam)}
+          value={paramsValue}
           onChange={handleSortParamChange}
-          getOptionLabel={(option) => option.label}
-          getOptionValue={(option) => option.value.toString()}
+          getOptionLabel={getLabel}
+          getOptionValue={getValue}
           styles={customStyles}
         />
       </div>
@@ -48,10 +51,10 @@ const Selectors: FC<Props> = ({
         <p>order</p>
         <Select<OptionType>
           options={sortOrders}
-          value={sortOrders.find((option) => option.value === sortOrder)}
+          value={orderValue}
           onChange={handleSortOrderChange}
-          getOptionLabel={(option) => option.label}
-          getOptionValue={(option) => option.value.toString()}
+          getOptionLabel={getLabel}
+          getOptionValue={getValue}
           styles={customStyles}
         />
       </div>

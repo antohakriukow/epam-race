@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { useActions, useDeleteCar } from '@/hooks';
 import { Button } from '@/components/ui';
-import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
+import { useActions, useDeleteCar } from '@/hooks';
 import { ICarId } from '@/shared/types/car.types';
+import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 
 const SelectRemoveButtons: FC<ICarId> = ({ id }) => {
   const { deleteCar } = useDeleteCar();

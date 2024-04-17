@@ -2,14 +2,14 @@ import { CSSProperties, FC } from 'react';
 import cn from 'clsx';
 import { Buckles } from '@/components/ui';
 import { LineType } from '@/app/garage/types';
-
-import styles from './line.module.scss';
+import { getStringInPixels } from '@/shared/utils/getStringInPixels';
 import {
   CAR_LENGTH,
   GARAGE_LENGTH,
   START_LINE_WIDTH,
 } from '@/shared/constants';
-import { getStringInPixels } from '@/shared/utils/getStringInPixels';
+
+import styles from './line.module.scss';
 
 interface LineProps {
   type: LineType;

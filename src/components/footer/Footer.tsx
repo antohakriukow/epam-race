@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import GithubLogo from '../ui/svg/GithubLogo';
 
 import styles from './footer.module.scss';
-import GithubLogo from '../ui/svg/GithubLogo';
 
 const Footer: FC = () => {
   return (

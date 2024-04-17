@@ -6,7 +6,7 @@ import { GARAGE_PAGE_LIMIT } from '@/shared/constants';
 
 export const useCars = () => {
   const { garagePageNumber } = useTypedSelector((state) => state.garage);
-  const { setGaragePageNumber, clearEnginesState } = useActions();
+  const { setGaragePageNumber, clearRaceState } = useActions();
 
   const { data, isSuccess, isLoading, isFetching } = useQuery<{
     data: ICar[];
@@ -18,7 +18,7 @@ export const useCars = () => {
   });
 
   const setPage = (page: number) => {
-    clearEnginesState();
+    clearRaceState();
     setGaragePageNumber(page);
   };
 

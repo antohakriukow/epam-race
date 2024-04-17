@@ -1,9 +1,9 @@
 import {
   setEngineStatus,
   setRaceData,
-  clearEnginesState,
+  clearRaceState,
   setWinner,
-} from './engines/engines.slice';
+} from './race/race.slice';
 
 import {
   setGaragePageNumber,
@@ -21,7 +21,7 @@ import { setWinnersPageNumber } from './winners/winners.slice';
 export const rootActions = {
   setEngineStatus,
   setRaceData,
-  clearEnginesState,
+  clearRaceState,
 
   setGaragePageNumber,
   setUpdatingCarId,

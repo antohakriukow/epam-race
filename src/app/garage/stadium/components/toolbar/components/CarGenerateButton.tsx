@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { useGenerateCars } from '@/hooks';
 import { Button } from '@/components/ui';
+import { useGenerateCars } from '@/hooks';
 import { COLOR_SUCCESS } from '@/shared/styles/colors';
 
 const CarGenerateButton: FC = () => {

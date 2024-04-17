@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { EngineStatus, IEngineWithId } from '@/shared/types/engine.types';
-import { IEngineState } from './engines.interface';
+import { IRaceState } from './race.interface';
 import { ICar } from '@/shared/types/car.types';
 
 interface SetRaceDataPayload {
@@ -9,13 +9,13 @@ interface SetRaceDataPayload {
   distance: number;
 }
 
-const initialState: IEngineState = {
+const initialState: IRaceState = {
   engines: {},
   winner: null,
 };
 
-export const enginesSlice = createSlice({
-  name: 'engines',
+export const raceSlice = createSlice({
+  name: 'race',
   initialState,
   reducers: {
     setEngineStatus: (state, action: PayloadAction<IEngineWithId>) => {
@@ -51,7 +51,7 @@ export const enginesSlice = createSlice({
       }
     },
 
-    clearEnginesState: (state) => {
+    clearRaceState: (state) => {
       Object.keys(state.engines).forEach((id) => {
         state.engines[id] = {
           status: EngineStatus.STOPPED,
@@ -64,7 +64,7 @@ export const enginesSlice = createSlice({
   },
 });
 
-export const { setEngineStatus, setRaceData, clearEnginesState, setWinner } =
-  enginesSlice.actions;
+export const { setEngineStatus, setRaceData, clearRaceState, setWinner } =
+  raceSlice.actions;
 
-export const enginesReducer = enginesSlice.reducer;
+export const raceReducer = raceSlice.reducer;

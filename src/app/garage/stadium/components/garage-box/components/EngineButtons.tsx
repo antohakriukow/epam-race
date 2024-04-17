@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Button } from '@/components/ui';
-import { COLOR_YELLOW } from '@/shared/styles/colors';
 import { ISingleRaceData } from '@/app/garage/types';
 import { EngineStatus } from '@/shared/types/engine.types';
+import { COLOR_YELLOW } from '@/shared/styles/colors';
 
 interface Props {
   singleRaceData: ISingleRaceData;

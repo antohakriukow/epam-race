@@ -5,7 +5,7 @@ import { useTypedSelector } from '@/hooks';
 import styles from './winners-modal.module.scss';
 
 const WinnersModal: FC = () => {
-  const { winner } = useTypedSelector((state) => state.engines);
+  const winner = useTypedSelector((state) => state.race.winner);
 
   if (!winner?.velocity || !winner.distance) return null;
 

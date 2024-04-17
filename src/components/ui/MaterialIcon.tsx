@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import * as MaterialIcons from 'react-icons/md';
-
 import { TypeMaterialIconName } from '@/shared/types/icon.types';
 
 interface Props {

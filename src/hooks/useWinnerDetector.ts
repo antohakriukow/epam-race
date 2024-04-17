@@ -6,7 +6,7 @@ import { useCreateWinner } from './useCreateWinner';
 
 export const useWinnerDetector = (cars: ICar[]) => {
   const { setWinner } = useActions();
-  const { winner } = useTypedSelector((state) => state.engines);
+  const winner = useTypedSelector((state) => state.race.winner);
   const [isWinnerDetectorOn, setIsWinnerDetectorOn] = useState(false);
   const createWinner = useCreateWinner();
 

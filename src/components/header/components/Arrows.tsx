@@ -3,12 +3,12 @@ import { Arrow } from '@/components/ui';
 
 import styles from '../header.module.scss';
 
-interface ArrowSetProps {
+interface Props {
   color: string;
   count: number;
 }
 
-const ArrowSet: FC<ArrowSetProps> = ({ color, count }) => {
+const ArrowSet: FC<Props> = ({ color, count }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dynamicCount, setDynamicCount] = useState(count);
 

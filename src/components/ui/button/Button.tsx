@@ -2,9 +2,9 @@ import { FC } from 'react';
 import cn from 'clsx';
 import MaterialIcon from '../MaterialIcon';
 import { TypeMaterialIconName } from '@/shared/types/icon.types';
+import { COLOR_GRAY } from '@/shared/styles/colors';
 
 import styles from './button.module.scss';
-import { COLOR_GRAY } from '@/shared/styles/colors';
 
 type TypeSize = 'L' | 'M' | 'S';
 

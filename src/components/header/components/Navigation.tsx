@@ -7,10 +7,10 @@ import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 import styles from '../header.module.scss';
 
 const Navigation: FC = () => {
-  const { clearEnginesState } = useActions();
+  const { clearRaceState } = useActions();
   const router = useRouter();
   const goToGarage = () => {
-    clearEnginesState();
+    clearRaceState();
     router.push('/garage', undefined);
   };
   const goToWinners = () => router.push('/winners', undefined);

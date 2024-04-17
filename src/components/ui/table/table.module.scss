@@ -17,7 +17,7 @@
 
   > tr {
     @apply w-full grid grid-flow-col;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: 40px 70px 1fr 50px 180px;
     > th {
       @apply text-left uppercase text-xl text-white;
     }
@@ -33,9 +33,9 @@
 
 .row {
   @apply w-full grid grid-flow-col py-2 px-2;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 40px 70px 1fr 50px 180px;
   > td {
-    @apply flex items-center text-white uppercase text-xl font-bold max-h-8 overflow-hidden;
+    @apply text-white uppercase text-xl font-bold max-h-8 overflow-hidden overflow-ellipsis;
     @include font-codystar;
   }
 }

@@ -1,5 +1,5 @@
-import { MODAL_PLACEHOLDER_ID } from '@/shared/constants';
 import { FC } from 'react';
+import { MODAL_PLACEHOLDER_ID } from '@/shared/constants';
 
 import styles from './placeholder.module.scss';
 

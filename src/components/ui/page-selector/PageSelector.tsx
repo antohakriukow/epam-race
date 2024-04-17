@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { BsCaretLeft, BsCaretRight } from 'react-icons/bs';
-
-import styles from './page-selector.module.scss';
-import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
 import { GARAGE_PAGE_LIMIT, WINNERS_PAGE_LIMIT } from '@/shared/constants';
 import { calculateLastPageNumber } from '@/shared/utils/calculateLastPageNumber';
+import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
+
+import styles from './page-selector.module.scss';
 
 interface Props {
   type: 'garage' | 'winners';
