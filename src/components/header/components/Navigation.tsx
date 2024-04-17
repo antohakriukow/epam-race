@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui';
+import { useActions } from '@/shared/hooks';
 import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 
 import styles from '../header.module.scss';
-import { useActions } from '@/shared/hooks';
 
 const Navigation: FC = () => {
   const { clearEnginesState } = useActions();

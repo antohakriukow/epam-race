@@ -10,3 +10,5 @@ export const carLength = getStringInPixels(CAR_LENGTH);
 export const startCarPosition = getStringInPixels(
   -CAR_LENGTH - START_LINE_WIDTH,
 );
+
+export const MODAL_PLACEHOLDER_ID = 'modal-placeholder';

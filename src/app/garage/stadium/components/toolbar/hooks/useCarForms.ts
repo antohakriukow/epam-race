@@ -1,5 +1,9 @@
-import { useCreateCar, useUpdateCar } from '@/app/garage/hooks';
-import { useActions, useTypedSelector } from '@/shared/hooks';
+import {
+  useCreateCar,
+  useUpdateCar,
+  useActions,
+  useTypedSelector,
+} from '@/shared/hooks';
 
 export const useCarForms = () => {
   const { createCar } = useCreateCar();

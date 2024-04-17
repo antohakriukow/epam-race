@@ -3,13 +3,12 @@ import cn from 'clsx';
 import GarageBox from '../garage-box/GarageBox';
 import { Car } from '@/components/ui';
 import { ICar } from '@/shared/types/car.types';
-import { useSingleRace } from '@/app/garage/hooks';
 import { carLength, startCarPosition } from '@/shared/constants';
 
 import styles from './track.module.scss';
 import CarAnimation from '@/shared/utils/carAnimation';
 import { EngineStatus } from '@/shared/types/engine.types';
-import { useTypedSelector } from '@/shared/hooks';
+import { useTypedSelector, useSingleRace } from '@/shared/hooks';
 
 interface Props {
   car: ICar;

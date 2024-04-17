@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { useDeleteCar } from '@/app/garage/hooks';
-import { useActions } from '@/shared/hooks';
+import { useActions, useDeleteCar } from '@/shared/hooks';
 import { Button } from '@/components/ui';
 import { COLOR_PRIMARY_500, COLOR_SECONDARY } from '@/shared/styles/colors';
 import { ICarId } from '@/shared/types/car.types';

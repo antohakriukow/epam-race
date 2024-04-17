@@ -1,3 +1,5 @@
+import { ICar } from '@/shared/types/car.types';
+
 export interface IGarageState {
   garagePageNumber: number;
   updatingCarId: string | null;
@@ -5,4 +7,5 @@ export interface IGarageState {
   updatingCarColor: string;
   creatingCarName: string | null;
   creatingCarColor: string;
+  winner: ICar | null;
 }

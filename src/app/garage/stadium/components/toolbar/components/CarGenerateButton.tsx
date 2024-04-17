@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useGenerateCars } from '@/app/garage/hooks/useGenerateCars';
+import { useGenerateCars } from '@/shared/hooks';
 import { Button } from '@/components/ui';
 import { COLOR_SUCCESS } from '@/shared/styles/colors';
 

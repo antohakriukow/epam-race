@@ -19,7 +19,10 @@ const Stadium: FC<Props> = ({ cars, isSuccess, isLoading }) => {
   return (
     <div className={styles.container}>
       <Line type={LineType.START} />
-      <div className={styles.tracks}>
+      <div
+        id='tracks'
+        className={styles.tracks}
+      >
         {!!cars.length &&
           cars.map((car, index) => (
             <Track

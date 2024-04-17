@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { enginesReducer } from './engines/engines.slice';
 import { garageReducer } from './garage/garage.slice';
 import { winnersReducer } from './winners/winners.slice';
-import { enginesReducer } from './engines/engines.slice';
 
 export const store = configureStore({
   reducer: {

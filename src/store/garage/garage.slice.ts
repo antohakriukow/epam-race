@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { IGarageState } from './garage.interface';
 import { COLOR_PRIMARY_500 } from '@/shared/styles/colors';
+import { ICar } from '@/shared/types/car.types';
 
 const initialState: IGarageState = {
   garagePageNumber: 1,
@@ -9,6 +10,7 @@ const initialState: IGarageState = {
   updatingCarColor: COLOR_PRIMARY_500,
   creatingCarName: null,
   creatingCarColor: COLOR_PRIMARY_500,
+  winner: null,
 };
 
 export const garageSlice = createSlice({
@@ -35,6 +37,9 @@ export const garageSlice = createSlice({
     setCreatingCarColor: (state, action: PayloadAction<string>) => {
       state.creatingCarColor = action.payload;
     },
+    setWinner: (state, action: PayloadAction<ICar | null>) => {
+      state.winner = action.payload;
+    },
 
     clearCreatingCarStore: (state) => {
       state.creatingCarName = null;
@@ -56,6 +61,7 @@ export const {
   setUpdatingCarColor,
   setCreatingCarName,
   setCreatingCarColor,
+  setWinner,
   clearCreatingCarStore,
   clearUpdatingCarStore,
 } = garageSlice.actions;

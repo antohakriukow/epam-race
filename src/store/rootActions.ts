@@ -1,4 +1,9 @@
-import { setWinnersPageNumber } from './winners/winners.slice';
+import {
+  setEngineStatus,
+  setRaceData,
+  clearEnginesState,
+  setWinner,
+} from './engines/engines.slice';
 
 import {
   setGaragePageNumber,
@@ -11,14 +16,12 @@ import {
   clearUpdatingCarStore,
 } from './garage/garage.slice';
 
-import {
+import { setWinnersPageNumber } from './winners/winners.slice';
+
+export const rootActions = {
   setEngineStatus,
   setRaceData,
   clearEnginesState,
-} from './engines/engines.slice';
-
-export const rootActions = {
-  setWinnersPageNumber,
 
   setGaragePageNumber,
   setUpdatingCarId,
@@ -26,10 +29,9 @@ export const rootActions = {
   setUpdatingCarColor,
   setCreatingCarName,
   setCreatingCarColor,
+  setWinner,
   clearCreatingCarStore,
   clearUpdatingCarStore,
 
-  setEngineStatus,
-  setRaceData,
-  clearEnginesState,
+  setWinnersPageNumber,
 };

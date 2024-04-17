@@ -4,14 +4,15 @@ import RaceButtons from './components/RaceButtons';
 import CarForms from './components/CarForms';
 
 import styles from './toolbar.module.scss';
+import { ICar } from '@/shared/types/car.types';
 
 interface Props {
-  carIds: string[];
+  cars: ICar[];
 }
 
-const Toolbar: FC<Props> = ({ carIds }) => (
+const Toolbar: FC<Props> = ({ cars }) => (
   <div className={styles.container}>
-    <RaceButtons carIds={carIds} />
+    <RaceButtons cars={cars} />
     <CarForms />
     <CarGenerateButton />
   </div>

@@ -1,6 +1,6 @@
 'use client';
 import { FC } from 'react';
-import { useWinners } from './useWinners';
+import { useWinners } from '@/shared/hooks';
 import { Body, Caption, Header, Row, Table, Car } from '@/components/ui';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
 

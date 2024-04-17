@@ -1,19 +1,19 @@
 'use client';
 
 import { FC } from 'react';
-import { useCars } from './hooks/useCars';
+import { useCars } from '@/shared/hooks';
 import Toolbar from './stadium/components/toolbar/Toolbar';
 import Stadium from './stadium/Stadium';
 import PageSelector from '@/components/ui/page-selector/PageSelector';
 import Border from './stadium/components/border/Border';
+import ModalPlaceHolder from '@/components/ui/modal/ModalPlaceHolder';
 
 const GaragePage: FC = () => {
   const { page, setPage, totalCount, cars, isSuccess, isLoading } = useCars();
-  const carIds = cars.map((car) => car.id);
 
   return (
     <main>
-      <Toolbar carIds={carIds} />
+      <Toolbar cars={cars} />
       <Border>
         <Stadium
           cars={cars}
@@ -27,6 +27,7 @@ const GaragePage: FC = () => {
         setPage={setPage}
         totalCount={totalCount}
       />
+      <ModalPlaceHolder />
     </main>
   );
 };
