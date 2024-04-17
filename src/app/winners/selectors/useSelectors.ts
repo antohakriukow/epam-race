@@ -26,7 +26,6 @@ export const useSelectors = () => {
     }),
   };
   const sortParams: OptionType[] = [
-    { value: SortParam.ID, label: 'car id' },
     { value: SortParam.TIME, label: 'race time' },
     { value: SortParam.WINS, label: 'wins count' },
   ];

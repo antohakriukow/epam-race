@@ -1,5 +1,4 @@
 export enum SortParam {
-  ID = 'id',
   WINS = 'wins',
   TIME = 'time',
 }
