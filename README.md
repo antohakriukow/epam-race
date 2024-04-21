@@ -1,7 +1,10 @@
 ## Async-race Epam task
 
 **Total score:** 320
+
 **UI deployment link:** https://async-race-vert.vercel.app/
+
+**Backend:** https://github.com/mikhama/async-race-api
 
 ## Checklist
 
